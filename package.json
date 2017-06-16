@@ -1,0 +1,18 @@
+{
+  "name": "email-template-omed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Sinco <psinco@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "jade-html-loader": "0.0.3",
+    "raw-loader": "^0.5.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
