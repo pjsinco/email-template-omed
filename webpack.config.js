@@ -19,7 +19,7 @@ module.exports = {
       {
         test: /\.jade$/,
         include: path.resolve(__dirname, 'src', 'views'),
-        loader: 'raw!jade-html',
+        loader: 'raw-loader!jade-html-loader',
       },
     ],
   },
