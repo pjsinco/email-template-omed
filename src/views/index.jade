@@ -1,6 +1,5 @@
 include ./includes/mixins
 
-
 // CONTAINER FOR EMAIL
 table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
   tr
@@ -33,8 +32,40 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
                               table(border="0" cellpadding="0" cellspacing="0" width="480" align="center" class="wrapper")
 
                                 +kicker('Lorem ipsum dolor')
-                                +headline('Vestibulum id ligula porta ipsum semper')
+                                +headline('')
+
+                                //- HEADLINE
+                                tr
+                                  td(class="body-text" style="padding: 0px 0px 10px; font-family: #{ffMedium}; font-weight: normal; font-size: 32px; text-align: center; line-height: 40px; color: #{red};") Save on OMED 
+                                    br
+                                    | this 4th of July
                                 +subhead('Aenean lacinia bibendum nulla sed consectetur donec sed odio')
-                                +graf('Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.')
-                                +cta('Lorem ipsum', '#', red)
+                                +graf('This holiday weekend, take advantage of our FLASH SALE for HUGE SAVINGS on OMED registration. While you’re celebrating America’s independence, take the first step to joining the largest gathering of DOs, Oct. 7-10 in Philadelphia.')
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};") 
+                                    | We don’t want you to miss this #[a(href="#{programUrl}" target="_blank" style=grafUrlStyle) premier event] featuring 15 specialty colleges, more than 35+ hours of CME and dually-accredited programming from Mayo Clinic and Cleveland Clinic.
+                                +graf('Don’t wait to save big, offer ends on July 6.')
+
+                                tr
+                                  td(class="body-text" style=grafStyleEmph)
+                                    | Use code FREEDOM to save $100 off the standard registration rate.
+ 
+
+                                +cta('Register Today', registrationUrl, red)
+
+                                +disclaimer('Promotion is for member or nonmember DOs and codes cannot be combined with other promotions.')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

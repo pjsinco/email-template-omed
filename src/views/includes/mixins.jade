@@ -1,9 +1,4 @@
-- var textColor = 'rgb(102,102,102)'
-- var blue = '#3d5ba9'
-- var red = '#d53847'
-- var sand = '#fbfaf5'
-- var ffBook = "'gotham-book', Helvetica, Arial, sans-serif"
-- var ffMedium = "'gotham-medium', Helvetica, Arial, sans-serif"
+include ./variables
 
 mixin button(color, url, text)
   // BUTTON
@@ -32,7 +27,13 @@ mixin subhead(text, color = blue)
 mixin graf(text)
   //- GRAF
   tr
-    td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};") #{text}
+    td(class="body-text" style=grafStyle) #{text}
+
+mixin disclaimer(text)
+  //- GRAF
+  tr
+    td(class="body-text" style=disclaimerStyle) #{text}
+
   
 mixin cta(text, link, color = red)
   //- CTA
