@@ -8,6 +8,14 @@ mixin button(color, url, text)
         a(class="body-text" href="#{url}" target="_blank" style="padding: 0px 10px 0px 10px; font-size: 15px; font-family: #{ffMedium}; font-weight: normal; color: #ffffff; text-decoration: none; text-transform: uppercase; letter-spacing: .5px; background-color: #{color}; border-top: 10px solid #{color}; border-bottom: 10px solid #{color}; border-left: 20px solid #{color}; border-right: 20px solid #{color}; display: inline-block;").
           &nbsp;#{text}&nbsp;
 
+mixin footerLine(text, bold = false)
+  tr
+    td(class="body-text" align="center" style="font-family: #{ffBook}; font-weight: normal; font-size: 14px; line-height: 22px; color: #{textColor};")
+      if bold
+        | #[span(class="appleFooter" style="color: #{textColor}; font-weight: bold;") #{text}]
+      else
+        | #[span(class="appleFooter" style="color: #{textColor}; font-weight: normal;") #{text}]
+
 mixin kicker(text, color = blue)
   //- KICKER
   tr
@@ -17,7 +25,7 @@ mixin kicker(text, color = blue)
 mixin headline(text, color = red)
   //- HEADLINE
   tr
-    td(class="body-text" style="padding: 0px 0px 10px; font-family: #{ffMedium}; font-weight: normal; font-size: 32px; text-align: center; line-height: 40px; color: #{color};") #{text}
+    td(class="body-text" style="padding: 0px 0px 10px; font-family: #{ffMedium}; font-weight: bold; font-size: 32px; text-align: center; line-height: 40px; color: #{color};") #{text}
   
 mixin subhead(text, color = blue)
   //- SUBHEAD
@@ -40,3 +48,34 @@ mixin cta(text, link, color = red)
   tr
     td(class="body-text" style="padding: 0px 0px 25px; font-family: Roboto, Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; text-align: left; line-height: 20px; color: rgb(102, 102, 102);") 
       +button(color, link, text)
+
+mixin socialIcon(url, imageUrl, alt, width, height)
+  a(href="#{url}" style="text-decoration: none;" target="_blank")
+    img(src="#{imageUrl}" alt="#{alt}" style="font-family: Arial; color: #{red}; font-size: 12px; line-height: 16px; font-weight: normal;" width="#{width}" height="#{height}")
+
+mixin social
+  tr
+    td(align="center" style="padding: 12px 0px 0px 0px;")
+      table(border="0" cellpadding="0" cellspacing="0" width="150")
+        tr
+          td(align="left" style="padding: 0px 10px;")
+            +socialIcon('http://facebook.com/osteopathicphysicians', 'http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo57-facebook.png', 'Facebook', 28, 28)
+          td(align="center" style="padding: 0px 10px;")
+            +socialIcon('http://twitter.com/aoafordos', 'http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo57-twitter.png', 'Twitter', 28, 28)
+          td(align="right" style="padding: 0px 10px;")
+            +socialIcon('https://www.linkedin.com/grp/home?gid=76192', 'http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo57-linkedin.png', 'LinkedIn', 28, 28)
+
+mixin unsubscribe
+  tr
+    td(class="body-text" align="center" style="padding: 20px 0px 0px 0px;")
+      | #[a(class="body-text" href="http://aoa-omed.informz.net/aoa-omed/optout.asp?uid=%%UID%%&amp;mi=%%MINSTANCEID%%&amp;fid=2225" style="text-decoration: none; font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #666666;" target="_blank") Unsubscribe]
+    
+
+mixin footerLogo(logoUrl, logoLink, alt, width, height)
+  tr
+    td(align="center" style="padding: 12px 0px 0px 0px;")
+      table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="100%")
+        tr
+          td(align="center" style="padding: 0px 10px;")
+            a(href="#{logoLink}" style="text-decoration: none;" target="_blank")
+              img(src="#{logoUrl}" alt="#{alt}" style="font-family: Arial; color: #{red}; font-size: 14px; line-height: 20px; font-weight: normal;" width="#{width}" height="#{height}")

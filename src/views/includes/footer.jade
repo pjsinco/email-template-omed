@@ -1,0 +1,26 @@
+// FOOTER
+// container table
+tr
+  td(align="center")
+    table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
+      tr
+        td(align="center")
+          // wrapper table
+          table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
+            tr
+              td(class="padding" align="center" style="padding: 20px 0 20px 0;")
+                // content table
+                table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="100%")
+                  +footerLogo('http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo200-aoa.png', 'http://www.osteopathic.org/Pages/default.aspx', 'AOA', '100', '49')
+                  +footerLine('American Osteopathic Association', true)
+                  +footerLine('142 E. Ontario St., Chicago, IL 60611', false)
+                  +footerLine('Phone: (888) 62-MYAOA (888-626-9262)', false)
+                  tr
+                    td(class="body-text" align="center" style="font-family: #{ffBook}; font-weight: normal; font-size: 14px; line-height: 22px; color: #{textColor};")
+                      | #[span(class="appleFooter" style="color: #{textColor}; font-weight: normal;") Questions? Email #[a(href="mailto:omed@osteopathic.org" style="text-decoration: underline; color: #666666; font-weight: normal;" target="_blank") omed@osteopathic.org]]
+
+                  +social
+
+                  +unsubscribe
+
+
