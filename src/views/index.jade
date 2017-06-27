@@ -1,18 +1,54 @@
+include ./includes/mixins
+
+
 // CONTAINER FOR EMAIL
 table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
   tr
-    td(align="center" bgcolor="#ffffff")
+    td(align="center" bgcolor=sand)
 
       // EMAIL START
-      // wrapper table
+      // wrapper
       table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
         tr
           td
             include ./includes/top-matter
-
             include ./includes/header
 
         include ./includes/banner
 
-  
+        tr
+          td
+            table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
+              tr
+                td(class="padding-extra25-top" align="center" bgcolor=sand style="padding: 25px 0px 40px 0px;")
+                  // wrapper 
+                  table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
+                    tr
+                      td
+                        table(border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="wrapper")
 
+                          tr
+                            td(align="center" class="padding-no-bottom" style="padding: 10px 0px 0px;")
+                              table(border="0" cellpadding="0" cellspacing="0" width="480" align="center" class="wrapper")
+
+                                //- KICKER
+                                tr
+                                  td(style="padding: 0px 0px 10px; font-family: #{ffMedium}; text-transform: uppercase; color: #{blue}; letter-spacing: 2px; font-size: 14px; text-align: center")
+                                    | Lorem ipsum dolor
+
+                                //- HEADLINE
+                                tr
+                                  td(class="body-text" style="padding: 0px 0px 10px; font-family: #{ffMedium}; font-weight: normal; font-size: 32px; text-align: center; line-height: 40px; color: #{red};") Vestibulum id ligula porta ipsum semper
+ 
+                                //- SUBHEAD
+                                tr
+                                  td(class="body-text subhead-main" style="padding: 0px 40px 15px; font-size: 21px; line-height: 28px; color: #{blue}; font-family: #{ffMedium}; font-weight: normal; text-align: center;") Aenean lacinia bibendum nulla sed consectetur donec sed odio
+ 
+                                //- BLURB
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: rgb(102,102,102);") Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.
+
+                                //- CTA
+                                tr
+                                  td(class="body-text" style="padding: 0px 0px 25px; font-family: Roboto, Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; text-align: left; line-height: 20px; color: rgb(102, 102, 102);") 
+                                    +button(red, '#', 'Lorem ipsum')

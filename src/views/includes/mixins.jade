@@ -1,0 +1,14 @@
+- var blue = '#3d5ba9'
+- var red = '#d53847'
+- var sand = '#fbfaf5'
+- var ffBook = "'gotham-book', Helvetica, Arial, sans-serif"
+- var ffMedium = "'gotham-medium', Helvetica, Arial, sans-serif"
+
+mixin button(color, url, text)
+  // BUTTON
+  table(width="100%" border="0" cellspacing="0" cellpadding="0")
+    tr
+      td(align="center" style="padding: 0;")
+        a(class="body-text" href="#{url}" target="_blank" style="padding: 0px 10px 0px 10px; font-size: 15px; font-family: #{ffMedium}; font-weight: normal; color: #ffffff; text-decoration: none; text-transform: uppercase; letter-spacing: .5px; background-color: #{color}; border-top: 10px solid #{color}; border-bottom: 10px solid #{color}; border-left: 20px solid #{color}; border-right: 20px solid #{color}; display: inline-block;").
+          &nbsp;#{text}&nbsp;
+
