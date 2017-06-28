@@ -37,6 +37,9 @@ mixin graf(text)
   tr
     td(class="body-text" style=grafStyle) #{text}
 
+mixin grafLink(text, url)
+  a(class="body-text" href="#{url}" target="_blank" style=grafUrlStyle) #{text}
+
 mixin disclaimer(text)
   //- GRAF
   tr
