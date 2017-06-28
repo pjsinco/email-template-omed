@@ -109,7 +109,7 @@
       img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
     
       /* RESET STYLES */
-      html{margin:0; padding:0;}
+      html{margin:0 !important; padding:0 !important;}
     
       img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
     
@@ -122,6 +122,11 @@
     
       .appleFooter a {color:#999999; text-decoration: none;}
     
+      /* INFORMZ Prevent space at top of email */
+      p[class="container"]{
+        margin: 0 !important;
+        padding: 0 !important;
+      }  
     
       /* MOBILE STYLES */
       @media screen and (max-width: 600px) {
@@ -262,7 +267,13 @@
             font-size: 32px !important;;
             line-height: 40px !important;
           }
+
+          td[class="body-text promo"]{
+            font-size: 13px !important;;
+            line-height: 22px !important;
+          }
     
+
       }
     </style>
     
