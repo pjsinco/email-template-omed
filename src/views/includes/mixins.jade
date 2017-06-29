@@ -71,8 +71,7 @@ mixin social
 mixin unsubscribe
   tr
     td(class="body-text" align="center" style="padding: 20px 0px 0px 0px;")
-      | #[a(class="body-text" href="http://aoa-omed.informz.net/aoa-omed/optout.asp?uid=%%UID%%&amp;mi=%%MINSTANCEID%%&amp;fid=2225" style="text-decoration: none; font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #666666;" target="_blank") Unsubscribe]
-    
+      | #[a(class="body-text" href="http://aoa-omed.informz.net/aoa-omed/default.asp?action=u&amp;mi=%%MINSTANCEID%%&amp;email=%%EMAIL%%&amp;fid=2230" style="text-decoration: none; font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #666666;" target="_blank") Unsubscribe]
 
 mixin footerLogo(logoUrl, logoLink, alt, width, height)
   tr
