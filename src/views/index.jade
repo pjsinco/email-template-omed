@@ -3,7 +3,7 @@ include ./includes/mixins
 // CONTAINER FOR EMAIL
 table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
   tr
-    td(align="center" bgcolor=sand)
+    td(align="center" bgcolor=purple)
 
       // EMAIL START
       // wrapper
@@ -20,7 +20,7 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
             //- Add border to this table when we need it
             table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
               tr
-                td(class="padding-extra25-top" align="center" bgcolor=sand style="padding: 25px 0px 15px 0px;")
+                td(class="padding-extra25-top" align="center" bgcolor=purple style="padding: 25px 0px 15px 0px;")
                   // wrapper 
                   table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
                     tr
@@ -28,30 +28,38 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
                         table(border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="wrapper")
 
                           tr
-                            td(align="center" class="padding-no-bottom" style="padding: 10px 0px 0px;")
+                            td(align="center" class="padding-no-bottom" style="padding: 10px 0px 20px; border-bottom: 1px solid #ada0cc;")
                               table(border="0" cellpadding="0" cellspacing="0" width="480" align="center" class="wrapper")
-                                +kicker('ONE DAY LEFT')
+                                +kicker('LOREM IPSUM', veryLightPurple)
 
                                 //- HEADLINE
                                 tr
-                                  td(class="body-text-headline" style="padding: 0px 0px 10px; font-family: #{ffMedium}; font-weight: 600; font-size: 42px; text-align: center; line-height: 50px; color: #{red};") 4th of July Flash Sale &mdash; ENDS TOMORROW
+                                  td(class="body-text-headline" style="padding: 0px 0px 10px; font-family: #{ffMedium}; font-weight: 600; font-size: 42px; text-align: center; line-height: 50px; text-shadow: #{textShadow}; color: #{textColorReverse};") $100 off OMED  &mdash; two days only for A.T. Still 
                                 
-                                +subhead('Hurry, you have just 24 hours left to save big on OMED')
+                                +subhead('Curabitur blandit tempus porttitor Etiam porta sem malesuada magna', veryLightPurple)
                                 tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};") 
-                                    | Come to Philadelphia and take your place at the largest osteopathic event of the year. You can’t miss this #[+grafLink('experience', 'http://mydigitalpublication.com/publication/?i=403769')], with 15 specialty colleges, 35+ hours of CME, TED-style talks, conference-wide receptions and so much more! You belong. Here.
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};") 
+                                    | On Aug. 6, we celebrated a BIG event - the 189th Birthday of A.T. Still! During his birthday month, we are keeping the celebration going with a special limited time offer just for you.
 
                                 tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};") 
-                                    | Don’t miss out on these savings &mdash; time is limited and this offer won’t last long. Join us Oct. 7-10.
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};") 
+                                    | In honor of our founder, we invite you to take advantage of our two-day FLASH SALE for HUGE SAVINGS &mdash; $100 off OMED registration.
 
                                 tr
-                                  td(class="body-text promo" style=grafStyleEmph) Use code FREEDOM to save $100
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};") 
+                                    | The festivities don’t end there. Continue the celebration at #[+grafLink('OMED', 'https://omed.osteopathic.org/', white)] Oct. 7-10 in Philadelphia, where you’ll enjoy alumni events, facilitated networking sessions in our new Braindates Lounge and a fun-filled Philly Block Party. You don’t want to miss this! You belong. Here.
+
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};") 
+                                    | Hurry, you only have 48 hours to save big. Offer ends on Aug. 19.
+
+                                tr
+                                  td(class="body-text promo" style=grafStyleEmphWhitePurple) Use code BIRTHDAY to save $100
                                     br
                                     | off the standard registration rate.
 
-                                +cta('Register Today', registrationUrl, red)
+                                +cta('Register Today', housingUrl, red)
 
-                                +disclaimer('Promotion is for member or nonmember DOs and codes cannot be combined with other promotions.')
+                                +disclaimer('Promotion is for member or nonmember DOs and codes cannot be combined with other promotions.', 'reverse')
 
         include ./includes/footer
