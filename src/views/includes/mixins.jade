@@ -8,13 +8,13 @@ mixin button(color, url, text)
         a(class="body-text" href="#{url}" target="_blank" style="padding: 0px 10px 0px 10px; font-size: 15px; font-family: #{ffMedium}; font-weight: normal; color: #ffffff; text-decoration: none; text-transform: uppercase; letter-spacing: .5px; background-color: #{color}; border-top: 10px solid #{color}; border-bottom: 10px solid #{color}; border-left: 20px solid #{color}; border-right: 20px solid #{color}; display: inline-block;").
           &nbsp;#{text}&nbsp;
 
-mixin footerLine(text, bold = false)
+mixin footerLine(text, bold = false, color = textColor)
   tr
-    td(class="body-text" align="center" style="font-family: #{ffBook}; font-weight: normal; font-size: 14px; line-height: 22px; color: #{textColor};")
+    td(class="body-text" align="center" style="font-family: #{ffBook}; font-weight: normal; font-size: 14px; line-height: 22px; color: #{color};")
       if bold
-        | #[span(class="appleFooter" style="color: #{textColor}; font-weight: bold;") #{text}]
+        | #[span(class="appleFooter" style="color: #{color}; font-weight: bold; letter-spacing: .5px;") #{text}]
       else
-        | #[span(class="appleFooter" style="color: #{textColor}; font-weight: normal;") #{text}]
+        | #[span(class="appleFooter" style="color: #{color}; font-weight: normal;") #{text}]
 
 mixin kicker(text, color = blue)
   //- KICKER
@@ -37,13 +37,21 @@ mixin graf(text)
   tr
     td(class="body-text" style=grafStyle) #{text}
 
-mixin grafLink(text, url)
-  a(class="body-text" href="#{url}" target="_blank" style=grafUrlStyle) #{text}
+mixin grafLink(text, url, color = red)
+  if color == white
+    a(class="body-text" href="#{url}" target="_blank" style=grafUrlStyleWhite) #{text}
+  else
+    a(class="body-text" href="#{url}" target="_blank" style=grafUrlStyle) #{text}
 
-mixin disclaimer(text)
-  //- GRAF
-  tr
-    td(class="body-text" style=disclaimerStyle) #{text}
+mixin disclaimer(text, style = 'normal')
+  if style == 'reverse'
+    //- GRAF
+    tr
+      td(class="body-text" style=disclaimerStyleReverse) #{text}
+  else
+    //- GRAF
+    tr
+      td(class="body-text" style=disclaimerStyle) #{text}
 
   
 mixin cta(text, link, color = red)
@@ -52,32 +60,38 @@ mixin cta(text, link, color = red)
     td(class="body-text" style="padding: 0px 0px 25px; font-family: Roboto, Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; text-align: left; line-height: 20px; color: rgb(102, 102, 102);") 
       +button(color, link, text)
 
-mixin socialIcon(url, imageUrl, alt, width, height)
+mixin socialIcon(url, imageUrl, alt, width, height, altTextColor = 'red')
   a(href="#{url}" style="text-decoration: none;" target="_blank")
-    img(src="#{imageUrl}" alt="#{alt}" style="font-family: Arial; color: #{red}; font-size: 12px; line-height: 16px; font-weight: normal;" width="#{width}" height="#{height}")
+    img(src="#{imageUrl}" alt="#{alt}" style="font-family: Arial; color: #{altTextColor}; font-size: 12px; line-height: 16px; font-weight: normal;" width="#{width}" height="#{height}")
 
-mixin social
+mixin social(color = 'gray')
   tr
     td(align="center" style="padding: 12px 0px 0px 0px;")
       table(border="0" cellpadding="0" cellspacing="0" width="150")
         tr
           td(align="left" style="padding: 0px 10px;")
-            +socialIcon('http://facebook.com/osteopathicphysicians', 'http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo57-facebook.png', 'Facebook', 28, 28)
+            +socialIcon('http://facebook.com/osteopathicphysicians', 'http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo57-facebook-' + color + '.png', 'Facebook', 28, 28, white)
           td(align="center" style="padding: 0px 10px;")
-            +socialIcon('http://twitter.com/aoafordos', 'http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo57-twitter.png', 'Twitter', 28, 28)
+            +socialIcon('http://twitter.com/aoafordos', 'http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo57-twitter-' + color + '.png', 'Twitter', 28, 28, white)
           td(align="right" style="padding: 0px 10px;")
-            +socialIcon('https://www.linkedin.com/grp/home?gid=76192', 'http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo57-linkedin.png', 'LinkedIn', 28, 28)
+            +socialIcon('https://www.linkedin.com/grp/home?gid=76192', 'http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo57-linkedin-' + color + '.png', 'LinkedIn', 28, 28, white)
 
-mixin unsubscribe
+mixin unsubscribe(style = 'normal')
   tr
     td(class="body-text" align="center" style="padding: 20px 0px 0px 0px;")
-      | #[a(class="body-text" href="http://aoa-omed.informz.net/aoa-omed/default.asp?action=u&amp;mi=%%MINSTANCEID%%&amp;email=%%EMAIL%%&amp;fid=2230" style="text-decoration: none; font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #666666;" target="_blank") Unsubscribe]
+      if style == 'reverse'
+        | #[a(class="body-text" href="http://aoa-omed.informz.net/aoa-omed/default.asp?action=u&amp;mi=%%MINSTANCEID%%&amp;email=%%EMAIL%%&amp;fid=2230" style="text-decoration: none; font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #{veryLightPurple};" target="_blank") Unsubscribe]
+      else
+        | #[a(class="body-text" href="http://aoa-omed.informz.net/aoa-omed/default.asp?action=u&amp;mi=%%MINSTANCEID%%&amp;email=%%EMAIL%%&amp;fid=2230" style="text-decoration: none; font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #666666;" target="_blank") Unsubscribe]
 
-mixin footerLogo(logoUrl, logoLink, alt, width, height)
+mixin footerLogo(logoUrl, logoLink, alt, width, height, altTextColor = 'red')
   tr
     td(align="center" style="padding: 12px 0px 0px 0px;")
       table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="100%")
         tr
-          td(align="center" style="padding: 0px 10px;")
+          td(align="center" style="padding: 0px 10px 2px;")
             a(href="#{logoLink}" style="text-decoration: none;" target="_blank")
-              img(src="#{logoUrl}" alt="#{alt}" style="font-family: Arial; color: #{red}; font-size: 14px; line-height: 20px; font-weight: normal;" width="#{width}" height="#{height}")
+              img(src="#{logoUrl}" alt="#{alt}" style="font-family: Arial; color: #{altTextColor}; font-size: 14px; line-height: 20px; font-weight: normal;" width="#{width}" height="#{height}")
+
+mixin bannerImage(url, imageSrc, width, height, altText, altTextColor = 'red')
+  a(href="#{url}" target="_blank"): img(class="fluid-image" src="#{imageSrc}" width="#{width}" height="#{height}" border="0" alt="#{altText}" style="display: block; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center;")
