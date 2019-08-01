@@ -58,6 +58,13 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
 
                                 +cta('Register Today', housingUrl, red)
 
-                                +disclaimer('Promotion is only for residents and codes cannot be combined with other promotions.', 'reverse')
+                                tr
+                                  td(class="body-text" style=disclaimerStyleReverse) 
+                                    | Promotion code is for residents only be used for the current full registration rate. Codes cannot be combined with other promotions or applied to one-day rate. Don’t delay, registration code expires on July 8 Midnight EST.
+                                    br
+
+                                tr
+                                  td(class="body-text" style=disclaimerStyleReverse) 
+                                    | The official website for OMED registration and securing hotel reservations is #[a(class="body-text" href="#{omedUrl}" target="_blank" style="font-family: #{ffBook}; font-size: 13px; line-height: 20px; padding: 5px 0px 25px; font-style: italic; font-weight: normal; text-align: left; color: #{veryLightPurple};") OMED]. Any other third-party websites or solicitors asking for your credit card information are fraudulent and should be reported to #[a(class="body-text" href="mailto:conventions@osteopathic.org" target="_blank" style="font-family: #{ffBook}; font-size: 13px; line-height: 20px; padding: 5px 0px 25px; font-style: italic; font-weight: normal; text-align: left; color: #{veryLightPurple};") conventions@osteopathic.org] immediately.
 
         include ./includes/footer
