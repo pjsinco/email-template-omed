@@ -1,11 +1,9 @@
 const path = require('path');
 
 module.exports = {
-
   entry: {
-    app: [ path.resolve(__dirname, 'src', 'scripts', 'main.js') ],
+    app: [path.resolve(__dirname, 'src', 'scripts', 'main.js')],
   },
-
 
   output: {
     path: path.join(__dirname, 'public'),
@@ -14,7 +12,6 @@ module.exports = {
   },
 
   module: {
-
     loaders: [
       {
         test: /\.jade$/,
@@ -24,4 +21,3 @@ module.exports = {
     ],
   },
 };
-
