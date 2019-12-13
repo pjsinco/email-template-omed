@@ -26,12 +26,12 @@ mixin headline(text, color = red)
   //- HEADLINE
   tr
     td(class="body-text-headline" style="padding: 0px 0px 10px; font-family: #{ffMedium}; font-weight: bold; font-size: 32px; text-align: center; line-height: 40px; color: #{color};") #{text}
-  
+
 mixin subhead(text, color = blue)
   //- SUBHEAD
   tr
     td(class="body-text subhead-main" style="padding: 0px 40px 15px; font-size: 21px; line-height: 28px; color: #{color}; font-family: #{ffMedium}; font-weight: normal; text-align: center;") #{text}
-  
+
 mixin graf(text)
   //- GRAF
   tr
@@ -53,11 +53,11 @@ mixin disclaimer(text, style = 'normal')
     tr
       td(class="body-text" style=disclaimerStyle) #{text}
 
-  
+
 mixin cta(text, link, color = red)
   //- CTA
   tr
-    td(class="body-text" style="padding: 0px 0px 25px; font-family: Roboto, Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; text-align: left; line-height: 20px; color: rgb(102, 102, 102);") 
+    td(class="body-text" style="padding: 0px 0px 25px; font-family: Roboto, Helvetica, Arial, sans-serif; font-weight: normal; font-size: 16px; text-align: left; line-height: 20px; color: rgb(102, 102, 102);")
       +button(color, link, text)
 
 mixin socialIcon(url, imageUrl, alt, width, height, altTextColor = 'red')
@@ -80,18 +80,21 @@ mixin unsubscribe(style = 'normal')
   tr
     td(class="body-text" align="center" style="padding: 20px 0px 0px 0px;")
       if style == 'reverse'
-        | #[a(class="body-text" href="http://aoa-omed.informz.net/aoa-omed/default.asp?action=u&amp;mi=%%MINSTANCEID%%&amp;email=%%EMAIL%%&amp;fid=2230" style="text-decoration: none; font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #{veryLightPurple};" target="_blank") Unsubscribe]
+        | #[a(class="body-text" href="https://preferences.osteopathic.org/%%IMIS||UD||AOA_OptOut.IDHash%%?mi=%%MINSTANCEID%%&_zs=%%ENCODEDUID%%&_zmi=%%ENCODEDMAILINGINSTANCEID%%" style="font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #{veryLightPurple};" target="_blank") Manage your preferences or unsubscribe]
       else
-        | #[a(class="body-text" href="http://aoa-omed.informz.net/aoa-omed/default.asp?action=u&amp;mi=%%MINSTANCEID%%&amp;email=%%EMAIL%%&amp;fid=2230" style="text-decoration: none; font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #666666;" target="_blank") Unsubscribe]
+        | #[a(class="body-text" href="https://preferences.osteopathic.org/%%IMIS||UD||AOA_OptOut.IDHash%%?mi=%%MINSTANCEID%%&_zs=%%ENCODEDUID%%&_zmi=%%ENCODEDMAILINGINSTANCEID%%" style="font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #666666;" target="_blank") Manage your preferences or unsubscribe]
 
 mixin footerLogo(logoUrl, logoLink, alt, width, height, altTextColor = 'red')
   tr
     td(align="center" style="padding: 12px 0px 0px 0px;")
       table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="100%")
         tr
-          td(align="center" style="padding: 0px 10px 2px;")
+          td(align="center" style="padding: 0px 10px 42px 10px;")
             a(href="#{logoLink}" style="text-decoration: none;" target="_blank")
               img(src="#{logoUrl}" alt="#{alt}" style="font-family: Arial; color: #{altTextColor}; font-size: 14px; line-height: 20px; font-weight: normal;" width="#{width}" height="#{height}")
 
 mixin bannerImage(url, imageSrc, width, height, altText, altTextColor = 'red')
-  a(href="#{url}" target="_blank"): img(class="fluid-image" src="#{imageSrc}" width="#{width}" height="#{height}" border="0" alt="#{altText}" style="display: block; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center;")
+  img(class="fluid-image" src="#{imageSrc}" width="#{width}" height="#{height}" border="0" alt="#{altText}" style="display: block; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center; margin-left: auto; margin-right: auto;")
+
+mixin image(imageSrc, width, height, altText, altTextColor = 'red')
+  img(class="fluid-image" src="#{imageSrc}" width="#{width}" height="#{height}" border="0" alt="#{altText}" style="display: block; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center;")

@@ -3,7 +3,7 @@ include ./includes/mixins
 // CONTAINER FOR EMAIL
 table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
   tr
-    td(align="center" bgcolor=purple)
+    td(align="center" bgcolor=navy)
 
       // EMAIL START
       // wrapper
@@ -20,48 +20,43 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
             //- Add border to this table when we need it
             table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
               tr
-                td(class="padding-extra25-top" align="center" bgcolor=purple style="padding: 25px 0px 15px 0px;")
-                  // wrapper 
+                td(class="padding-extra25-top" align="center" bgcolor=navy style="padding: 60px 0px 15px 0px;")
+                  // wrapper
                   table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
                     tr
                       td
                         table(border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="wrapper")
 
                           tr
-                            td(align="center" class="padding-no-bottom" style="padding: 10px 0px 20px; border-bottom: 1px solid #ada0cc;")
+                            td(align="center" class="padding-no-bottom" style="padding: 10px 0px 20px;")
                               table(border="0" cellpadding="0" cellspacing="0" width="480" align="center" class="wrapper")
-                                +kicker('A SPECIAL GIFT FOR YOU', veryLightPurple)
-
-                                //- HEADLINE
                                 tr
-                                  td(class="body-text-headline" style="padding: 0px 0px 10px; font-family: #{ffMedium}; font-weight: 600; font-size: 42px; text-align: center; line-height: 50px; text-shadow: #{textShadow}; color: #{textColorReverse};") $50 off OMED &mdash; ONE DAY ONLY for A.T. Still
-                                
-                                +subhead('Hurry, you only have 24 hours to save big. Offer ends on Aug. 7.', veryLightPurple)
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};")
+                                    | In this joyful holiday season, I’m thankful for each and every one of our members, including you, Dr. Seaborn.
 
                                 tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};") 
-                                    | Today, we celebrate a BIG event &mdash; the birthday of our founder, A.T. Still! Celebrate by taking advantage of our FLASH SALE SAVINGS &mdash; $50 off OMED registration.
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};")
+                                    | I’m also thankful to lead the nation’s largest and only professional organization that represents all 145,000 osteopathic medical students and physicians—the most in history—and growing each year.
 
                                 tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};") 
-                                    | The festivities don’t end there. Continue the celebration at #[+grafLink('OMED', omedUrl, white)] Oct. 25-28 in Baltimore, where you’ll enjoy a stellar resident track, inspiring speakers, alumni events and a fun-filled Block Party. You don’t want to miss this premier event! Explore the #[+grafLink('updated conference program', programUrl, white)] to see everything we have in store for you.
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};")
+                                    | As I reflect on my past six months as CEO, I want you to know how excited and honored I am to be leading this organization into the next decade of the 21st century. I’m committed to our mission of advancing the distinctive philosophy and practice of osteopathic medicine in all we do.
 
                                 tr
-                                  td(class="body-text" style=grafStyleEmphWhite) Use code CAKE19 to save
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};")
+                                    | I’m glad you have chosen the AOA to be your professional home. On behalf of all of us, best wishes for a holiday season that is merry and bright.
+
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};")
+                                    | Bring on 2020!
+
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColorReverse};")
+                                    | Sincerely,
                                     br
-                                    | $50 off the current resident
                                     br
-                                    | full registration rate.
-
-                                +cta('Register Today', registrationUrl, red)
-
-                                tr
-                                  td(class="body-text" style=disclaimerStyleReverse) 
-                                    | Promotion code is for residents and can only be used for the current full registration rate. Codes cannot be combined with other promotions or applied to one-day rate. Don’t delay, registration code expires on Aug. 7 Midnight EST.
+                                    img(class="fluid-image" src="https://amorassoc.informz.net/AmOrAssoc/data/images/2019Holiday/klauer-sig-reversed-on-navy.png" width="140" height="61" border="0" alt="Dr. Klauer's signagure" style="display: block; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center;")
                                     br
-
-                                tr
-                                  td(class="body-text" style=disclaimerStyleReverse) 
-                                    | The official website for OMED registration and securing hotel reservations is #[a(class="body-text" href="#{omedUrl}" target="_blank" style="font-family: #{ffBook}; font-size: 13px; line-height: 20px; padding: 5px 0px 25px; font-style: italic; font-weight: normal; text-align: left; color: #{veryLightPurple};") OMED]. Any other third-party websites or solicitors asking for your credit card information are fraudulent and should be reported to #[a(class="body-text" href="mailto:conventions@osteopathic.org" target="_blank" style="font-family: #{ffBook}; font-size: 13px; line-height: 20px; padding: 5px 0px 25px; font-style: italic; font-weight: normal; text-align: left; color: #{veryLightPurple};") conventions@osteopathic.org] immediately.
+                                    | Kevin Klauer, DO, EJD
 
         include ./includes/footer
