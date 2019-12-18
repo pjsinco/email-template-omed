@@ -80,9 +80,9 @@ mixin unsubscribe(style = 'normal')
   tr
     td(class="body-text" align="center" style="padding: 20px 0px 0px 0px;")
       if style == 'reverse'
-        | #[a(class="body-text" href="https://preferences.osteopathic.org/%%IMIS||UD||AOA_OptOut.IDHash%%?mi=%%MINSTANCEID%%&_zs=%%ENCODEDUID%%&_zmi=%%ENCODEDMAILINGINSTANCEID%%" style="font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #{veryLightPurple};" target="_blank") Manage your preferences or unsubscribe]
+        | #[a(class="body-text" data-informz-link-type="Unsubscribe_Web_Page" href="https://preferences.osteopathic.org/%%IMIS||UD||AOA_OptOut.IDHash%%?mi=%%MINSTANCEID%%&_zs=%%ENCODEDUID%%&_zmi=%%ENCODEDMAILINGINSTANCEID%%" style="font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #{veryLightPurple};" target="_blank") Manage your preferences or unsubscribe]
       else
-        | #[a(class="body-text" href="https://preferences.osteopathic.org/%%IMIS||UD||AOA_OptOut.IDHash%%?mi=%%MINSTANCEID%%&_zs=%%ENCODEDUID%%&_zmi=%%ENCODEDMAILINGINSTANCEID%%" style="font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #666666;" target="_blank") Manage your preferences or unsubscribe]
+        | #[a(class="body-text" data-informz-link-type="Unsubscribe_Web_Page" href="https://preferences.osteopathic.org/%%IMIS||UD||AOA_OptOut.IDHash%%?mi=%%MINSTANCEID%%&_zs=%%ENCODEDUID%%&_zmi=%%ENCODEDMAILINGINSTANCEID%%" style="font-family: #{ffBook}; font-weight: normal; font-size: 13px; line-height: 24px; color: #666666;" target="_blank") Manage your preferences or unsubscribe]
 
 mixin footerLogo(logoUrl, logoLink, alt, width, height, altTextColor = 'red')
   tr
