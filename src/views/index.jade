@@ -21,7 +21,7 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
             table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
               tr
                 td(class="padding-extra25-top" align="center" bgcolor=white style="padding: 25px 0px 15px 0px;")
-                  // wrapper 
+                  // wrapper
                   table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
                     tr
                       td
@@ -30,46 +30,57 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
                           tr
                             td(align="center" class="padding-no-bottom" style="padding: 10px 0px 20px; border-bottom: 1px solid #{blue};")
                               table(border="0" cellpadding="0" cellspacing="0" width="480" align="center" class="wrapper")
-                                +kicker('Special Offer: Save $100', magenta)
+                                //-+kicker('Special Offer: Save $100', orange)
 
                                 //- HEADLINE
                                 tr
-                                  td(class="body-text-headline" style="padding: 0px 0px 16px; font-family: #{ffMedium}; font-weight: 600; font-size: 26px; text-align: center; line-height: 36px; color: #{blue};") Earn 35+ CME credits at the country’s largest osteopathic medical conference
-                                
-                                //-+subhead('Earn more than 35 CME credits at the country’s largest osteopathic medical conference', magenta)
+                                  td(class="body-text-headline" style="padding: 0px 0px 16px; font-family: #{ffMedium}; font-weight: 600; font-size: 36px; text-align: center; line-height: 48px; color: #{blue};") Earn Up to 50 CME Credits at Virtual OMED
+
+                                +subhead('Join Physician Colleagues at One of the Country’s Top Medical Conferences', orange)
 
                                 tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};") 
-                                    | Come to the Osteopathic Medical Conference & Exposition #[strong (#[a(class="body-text" href="#{omedUrl}" target="_blank" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: 600; text-align: left; color: #{magenta};") OMED]), Oct. 25-28 at the Baltimore Convention Center] to engage with thousands of physicians and medical students close to home. Take advantage of this once-a-year opportunity to fulfill your continuing education requirements. #[a(class="body-text" href="#{registrationUrl}" target="_blank" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: 400; text-align: left; color: #{magenta};") Register now] and plan to:
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | You’re invited to attend virtual #[b #[a(class="body-text" href="#{omedUrl}" target="_blank" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: 600; text-align: left; color: #{orange};") OMED]], Oct. 15-18!  Join your colleagues from around the nation and take advantage of the opportunity to learn, connect and recharge from the comfort of your home or workspace.
 
                                 tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};") 
-                                    ul(style="margin: 0; padding: 0;")
-                                      li(style="margin: 0 0 25px; list-style: disc inside; mso-special-format: bullet;")
-                                        | Come early for Thursday’s pre-conference sessions and start to #[strong earn 35+ hours of CME credits] offered by 14 specialty groups.
-                                      li(style="margin: 0 0 25px; list-style: disc inside; mso-special-format: bullet;")
-                                        | #[strong Explore innovative exhibits and exclusive dual CME sessions] (#[em AMA PRA Category 1 Credit™] and AOA Category 1-A CME credit) provided by the American College of Osteopathic Internists and #[strong Cleveland Clinic].
-                                      li(style="margin: 0 0; list-style: disc inside; mso-special-format: bullet;")
-                                        | NEW! Stay Monday for physician wellness CME sessions and take care of you.
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | OMED, the longest-running and most popular multi-specialty osteopathic medical education conference in the United States, features more than 180 hours of content from 12 specialties, including Family Practice, Addiction Medicine, Dermatology and more.
 
                                 tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};") 
-                                    | #[strong View the #[a(class="body-text" href="#{programUrl}" target="_blank" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: 600; text-align: left; color: #{magenta};") FULL PROGRAM]] to see everything OMED has to offer.
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | Register now and plan to:
 
                                 tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};") 
-                                    | Don't miss out. You'll feel empowered from the CME sessions and be inspired to excel from impactful #[+grafLink('keynote speakers', 'https://omed.osteopathic.org/speakers')], Mick Ebeling and Marc Goodman. Experience all this and more #[strong in one convenient location].
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | Earn up to 50 #[i AMA PRA Category 1 Credits&trade;] while gaining timely updates on COVID-19 and new strategies to manage pain, treat disease and promote wellness.
 
                                 tr
-                                  td(class="body-text" style=grafStyleEmph) Practicing physicans,
-                                    br
-                                    | use discount code BALTIMORE
-                                    br
-                                    | to save $100 off the full registration rate.
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | Collaborate with physicians across specialty groups and network with your colleagues from around the country.
 
-                                +cta('Register Today', registrationUrl, magenta)
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | Feel empowered and inspired from a powerful lineup of #[a(class="body-text" href="https://omed.osteopathic.org/speakers/" target="_blank" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: 600; text-align: left; color: #{orange};") keynote speakers] who have overcome great adversity to achieve success, and public health experts including the U.S. Secretary of Health and Human Services, who will provide updates on COVID-19.
 
-                                +disclaimer("Can't attend the entire conference? Save with the one-day rate and come on the day of your choice.") 
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | View the #[strong #[a(class="body-text" href="#{programUrl}" target="_blank" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: 600; text-align: left; color: #{orange};") FULL PROGRAM]] to see everything OMED has to offer you.
+
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | Experience all this and more conveniently in one online space.
+
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | BONUS: Can't attend all the live sessions? They will be available to watch 7 full days post-conference.
+
+                                tr
+                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                    | We hope to see you at virtual OMED. #[a(class="body-text" href="#{registrationUrl}" target="_blank" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: 600; text-align: left; color: #{orange};") Don&rsquo;t miss out!]
+
+                                +cta('Register now', registrationUrl, orange)
+
+                                //-+disclaimer("Can't attend the entire conference? Save with the one-day rate and come on the day of your choice.")
 
 
         include ./includes/footer
