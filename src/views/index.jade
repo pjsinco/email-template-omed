@@ -11,6 +11,7 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
         tr
           td
             include ./includes/top-matter
+            include ./includes/header
 
         include ./includes/banner
 
@@ -46,11 +47,13 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
                           tr
                             td(align="center" class="padding-no-bottom" style="padding: 10px 0px 20px;")
                               table(border="0" cellpadding="0" cellspacing="0" width="480" align="center" class="wrapper")
-                                +headline('Dr. %%IMIS||NAME||LAST_NAME%%, we’re wishing you a happy and healthy holiday', vermilion)
+                                //-+headline('Dr. %%IMIS||NAME||LAST_NAME%%, we’re wishing you a happy and healthy holiday', cardinal)
+                                +headline('Dr. Seaborn, we’re wishing you a happy and healthy holiday', cardinal)
 
                                 tr
                                   td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
-                                    | During this special time of year, I wanted you to know how thankful I am for each of our members, including you, Dr. %%IMIS||NAME||LAST_NAME%%.
+                                    //-| During this special time of year, I wanted you to know how thankful I am for each of our members, including you, Dr. %%IMIS||NAME||LAST_NAME%%.
+                                    | During this special time of year, I wanted you to know how thankful I am for each of our members, including you, Dr. Seaborn.
 
                                 tr
                                   td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
