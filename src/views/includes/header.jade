@@ -2,11 +2,10 @@ include ./mixins
 
 // HEADER
 // container table
-table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
-  tr
-    td(align="center")
-      // content
-      table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
-        tr
-          td(align="center" bgcolor="transparent" style="padding: 0px 0px 25px 0px;")
-            +footerLogo('http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/aoa-logo-white-200.png', 'https://osteopathic.org', 'AOA', '109', '53', white)
+tr
+  td(align="center" style="padding: 12px 0px 24px 0px;")
+    table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="100%")
+      tr
+        td(align="center" style="padding: 0px 10px 0px 10px;")
+          a(href="#{logoLink}" style="text-decoration: none;" target="_blank")
+            img(src="https://amorassoc.informz.net/AmOrAssoc/data/images/2020/aoa-logo-200.png" alt="AOA logo" style="font-family: Arial; color: #000066; font-size: 14px; line-height: 20px; font-weight: normal;" width="72" height="35")
