@@ -3,33 +3,34 @@ include ./includes/mixins
 // CONTAINER FOR EMAIL
 table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
   tr
-    td(align="center" bgcolor="#f8f9fc" style="background-color: #f8f9fc")
+    td(align="center" bgcolor="#fbf6ef" style="background-color: #fbf6ef")
+
 
       // EMAIL START
       // wrapper
       table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
         tr
           td
-            include ./includes/top-matter
-            //-include ./includes/header
+            //-include ./includes/top-matter
+            include ./includes/header
 
         include ./includes/banner
 
         // cast shadow
-        tr
-          td
-            table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
-              tr
-                td(align="center")
-                  // wrapper table
-                  table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
-                    tr
-                      td
-                        // content
-                        table(border="0" cellpadding="0" cellspacing="0" width="100%")
-                          tr
-                            td
-                              img(class="fluid-image" src="https://amorassoc.informz.net/AmOrAssoc/data/images/2021/card-shadow-top.png" width="600" height="73" border="0" alt="Cast shadow" style="display: block; padding: 0; color: #000066; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center; margin-left: auto; margin-right: auto;")
+        //tr
+        //  td
+        //    table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
+        //      tr
+        //        td(align="center")
+        //          // wrapper table
+        //          table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
+        //            tr
+        //              td
+        //                // content
+        //                table(border="0" cellpadding="0" cellspacing="0" width="100%")
+        //                  tr
+        //                    td
+        //                      img(class="fluid-image" src="https://amorassoc.informz.net/AmOrAssoc/data/images/2021/card-shadow-top.png" width="600" height="73" border="0" alt="Cast shadow" style="display: block; padding: 0; color: #000066; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center; margin-left: auto; margin-right: auto;")
 
         tr
           td
@@ -44,10 +45,13 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
                         table(border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="wrapper")
 
                           tr
-                            td(align="center" class="padding-no-bottom" style="padding: 10px 0px 0px 0px;")
+                            td(align="center" class="padding-no-bottom" style="padding: 30px 0px 0px 0px;")
                               table(border="0" cellpadding="0" cellspacing="0" width="480" align="center" class="wrapper")
                                 //-+headline('Dr. %%IMIS||NAME||LAST_NAME%%, we’re wishing you a happy and healthy holiday', cardinal)
-                                +headline('Wishing you peace and joy this holiday season, Dr. %%IMIS||NAME||LAST_NAME%%', '#cf5450')
+                                //-+headline('', '#cf5450')
+                                //- HEADLINE
+                                tr
+                                  td(class="body-text-headline" style="padding: 0px 28px 30px; font-family: #{ffMedium}; font-weight: bold; font-size: 36px; text-align: center; line-height: 44px; color: #cf5450;") Our warmest wishes for a special holiday season, Dr. Seaborn
 
                                 tr
                                   td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
