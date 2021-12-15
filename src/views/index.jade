@@ -3,7 +3,7 @@ include ./includes/mixins
 // CONTAINER FOR EMAIL
 table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
   tr
-    td(align="center" bgcolor="#{holidayRed}" style="background-color: #{holidayRed}")
+    td(align="center" bgcolor="#{holidayMint}" style="background-color: #{holidayMint}")
       // EMAIL START
       // wrapper
       table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
@@ -12,96 +12,63 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
             //-include ./includes/top-matter
             include ./includes/header
 
-        include ./includes/banner
-        tr(id="tr4")
-          //-td(style="border-left: 1px solid #{white}; border-right: 1px solid #{white}; border-bottom: 1px solid #{white};")
-          td
-            //- Add border to this table when we need it
-            table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
+        //- Add containing table for border around email
+
+        tr
+          td(style="border: 1px solid #{holidayRed}")
+            table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed; background-color: #ffffff;" bgcolor="#ffffff")
               tr
-                td(align="center" style="padding: 0px 0px 15px 0px;")
-                  // wrapper
-                  table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
-                    tr
-                      td
-                        table(border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="wrapper")
+                td
+                  include ./includes/banner
 
-                          tr
-                            td(align="center" class="padding-no-bottom" style="padding: 10px 0px 0px 0px; ")
-                              table(border="0" cellpadding="0" cellspacing="0" width="480" align="center" class="wrapper")
-                                //-+headline('Dr. %%IMIS||NAME||LAST_NAME%%, we’re wishing you a happy and healthy holiday', cardinal)
-                                //-+headline('Wishing you peace and joy this holiday season, Dr. %%IMIS||NAME||LAST_NAME%%', '#cf5450')
-                                //-+headline('A holiday gift just for you, Brooke', '#CA0539')
+                  tr(id="tr4")
+                    //-td(style="border-left: 1px solid #{holidayRed}; border-right: 1px solid #{holidayRed}; border-bottom: 1px solid #{holidayRed};")
+                    td
+                      //- Add border to this table when we need it
+                      table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed; background-color: #ffffff;" bgcolor="#ffffff")
 
 
-                                tr
-                                  td(class="body-text-headline" style="padding: 0px 0px 15px; font-family: proxima-nova, Helvetica, Arial, sans-serif; font-weight: bold; font-size: 48px; text-align: center; line-height: 56px; color: #{white};")
-                                    | A holiday gift just
-                                    br
-                                    | for you, Brooke
+                        tr
+                          td(align="center" style="padding: 0px 0px 15px 0px;")
+                            // wrapper
+                            table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="600")
+                              tr
+                                td
+                                  table(border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="wrapper")
 
+                                    tr
+                                      td(align="center" class="padding-no-bottom" style="padding: 10px 0px 0px 0px; ")
+                                        table(border="0" cellpadding="0" cellspacing="0" width="480" align="center" class="wrapper")
+                                          //-+headline('Dr. %%IMIS||NAME||LAST_NAME%%, we’re wishing you a happy and healthy holiday', cardinal)
+                                          //-+headline('Wishing you peace and joy this holiday season, Dr. %%IMIS||NAME||LAST_NAME%%', '#cf5450')
+                                          //-+headline('A holiday gift just for you, Brooke', '#CA0539')
 
+                                          tr
+                                            td(class="body-text-headline" style="padding: 0px 0px 32px; font-family: proxima-nova, Helvetica, Arial, sans-serif; font-weight: bold; font-size: 48px; text-align: center; line-height: 56px; color: #{holidayRed};")
+                                              | A holiday gift
+                                              br
+                                              | just for you
 
-                                tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{white};")
-                                    //-| During this special time of year, I wanted you to know how thankful I am for each of our members, including you, Dr. %%IMIS||NAME||LAST_NAME%%.
-                                    | Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.
-                                tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{white};")
-                                    | Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                          tr
+                                            td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                              //-| During this special time of year, I wanted you to know how thankful I am for each of our members, including you, Dr. %%IMIS||NAME||LAST_NAME%%.
+                                              | To our AOA Family:
+                                          tr
+                                            td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                              | Thank you for all you do for the osteopathic profession and the AOA.  As a token of my and our gratitude, we wanted to provide you with a holiday bonus of $500 in recognition of who you are, all you do and the impact you make individually and that we make collectively on this profession.
 
-                                tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{white};")
-                                    | Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
+                                          tr
+                                            td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                              | You are truly amazing and talented, and your efforts and contributions are very much valued and appreciated.
 
-                                tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{white};")
-                                    | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                                          tr
+                                            td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                              | Please have a wonderful a joyous holiday season!
 
-                                tr
-                                  td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{white};")
-                                    | Sincerely,
-
-                                tr
-                                  td
-                                    table(border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%")
-                                      tr
-                                        td
-                                          table(align="left" border="0" cellpadding="0" cellspacing="0" class="block" role="presentation" width="48%")
-                                            tr
-                                              td(style="text-align: center")
-                                                table(border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%")
-                                                  tr
-                                                    td(align="center")
-                                                      img(class="fluid-image" src="https://amorassoc.informz.net/AmOrAssoc/data/images/2021/giaimo-santa-1.png" width="125" height="175" border="0" alt="Portrait of Joseph Giaimo, DO" style="display: block; margin: 0 auto 0 auto; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center;")
-                                                  tr
-                                                    td(style="padding-top: 20px" align="center")
-                                                      img(class="fluid-image" src="https://amorassoc.informz.net/AmOrAssoc/data/images/2021/giaimo-sig-white-2.png" width="224" height="61" border="0" alt="Dr. Giaimo's signature" style="display: block; margin: 0 auto 0 auto; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center;")
-                                                  tr
-                                                    td(align="center" class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 20px 0px 0px 0px; font-weight: bold; text-align: center; color: #{white};")
-                                                      | Joseph A. Giaimo, DO, MACOI, FCCP
-
-                                                  tr
-                                                    td(align="center" class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: center; color: #{white};")
-                                                      | AOA President
-
-                                          table(align="right" border="0" cellpadding="0" cellspacing="0" class="block" role="presentation" width="48%")
-                                            tr
-                                              td(style="text-align: center")
-                                                table(border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%")
-                                                  tr
-                                                    td(align="center")
-                                                      img(class="fluid-image" src="https://amorassoc.informz.net/AmOrAssoc/data/images/2021/klauer-santa-1.png" width="125" height="175" border="0" alt="Portrait of Kevin M. Klauer, DO" style="display: block; margin: 0 auto 0 auto; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center;")
-                                                  tr
-                                                    td(align="center" style="padding-top: 20px")
-                                                      img(class="fluid-image" src="https://amorassoc.informz.net/AmOrAssoc/data/images/2021/klauer-sig-white-7.png" width="140" height="61" border="0" alt="Dr. Klauer's signagure" style="display: block; margin: 0 auto 0 auto; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center;")
-                                                  tr
-                                                    td(align="center" class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 20px 0px 0 0px; font-weight: bold; text-align: center; color: #{white};")
-                                                      | Kevin M. Klauer, DO, EJD
-                                                  tr
-
-                                                    td(align="center" class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: center; color: #{white};")
-                                                      | AOA CEO
-
+                                          tr
+                                            td(class="body-text" style="font-family: #{ffBook}; font-size: 16px; line-height: 24px; padding: 0px 0px 25px; font-weight: normal; text-align: left; color: #{textColor};")
+                                              | Sincerely,
+                                              br
+                                              | Kevin
 
         include ./includes/footer
