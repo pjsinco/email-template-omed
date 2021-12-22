@@ -4,26 +4,18 @@ include ./includes/mixins
 table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
   tr
     td(align="center" bgcolor="#fbf6ef" style="background-color: #fbf6ef")
-
       // EMAIL START
       // wrapper
       table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="648")
-        tr(id="tr1")
-          td(align="left").mobile-hide
-            table(border="0" cellpadding="0" cellspacing="0" width="48" style="table-layout: fixed;")
-              tr
-                td
-
-            //-include ./includes/top-matter
-            include ./includes/header
+        //-include ./includes/top-matter
+        include ./includes/header
 
         include ./includes/banner
-
 
         tr(id="tr4")
           td(align="left").mobile-hide
 
-          td(align="right")
+          td(align="center")
             //- Add border to this table when we need it
             table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
               tr
@@ -128,10 +120,12 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
                                         td(align="center")
                                           img(class="fluid-image" src="https://amorassoc.informz.net/AmOrAssoc/data/images/2021/bough-4.png" width="132" height="41" border="0" alt="Holiday bough" style="display: block; margin: 0 auto 0 auto; padding: 0; color: #{altTextColor}; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center;")
 
+          td(align="right").mobile-hide
+
         // cast shadow
         tr
           td(align="left").mobile-hide
-          td
+          td(align="center")
             table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;")
               tr
                 td(align="center")
@@ -144,5 +138,6 @@ table(border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layou
                           tr
                             td
                               img(class="fluid-image" src="https://amorassoc.informz.net/AmOrAssoc/data/images/2021/card-shadow-bottom.png" width="600" height="73" border="0" alt="Cast shadow" style="display: block; padding: 0; color: #000066; font-family: Helvetica, arial, sans-serif; font-size: 22px; line-height: 28px; text-align: center; margin-left: auto; margin-right: auto;")
+          td(align="right").mobile-hide
 
         include ./includes/footer
