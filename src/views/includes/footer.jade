@@ -11,14 +11,14 @@ tr
               td(class="padding" align="center" style="padding: 20px 0 20px 0;")
                 // content table
                 table(class="wrapper" border="0" cellpadding="0" cellspacing="0" width="100%")
-                  +footerLogo('http://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/aoa-logo-white-200.png', 'https://osteopathic.org', 'AOA', '100', '49', white)
-                  +footerLine('American Osteopathic Association', true, veryLightPurple)
-                  +footerLine('142 E. Ontario St., Chicago, IL 60611', false, veryLightPurple)
-                  +footerLine('Phone: (888) 62-MYAOA (888-626-9262)', false, veryLightPurple)
+                  +footerLogo('https://aoa-omed.informz.net/aoa-omed/data/images/OMED%202017/logo200-aoa.png', 'https://osteopathic.org', 'AOA', '100', '49', white)
+                  +footerLine('American Osteopathic Association', true, textColorLighter)
+                  +footerLine('142 E. Ontario St., Chicago, IL 60611', false, textColorLighter)
+                  +footerLine('Phone: (888) 62-MYAOA (888-626-9262)', false, textColorLighter)
                   tr
-                    td(class="body-text" align="center" style="font-family: #{ffBook}; font-weight: normal; font-size: 14px; line-height: 22px; color: #{veryLightPurple};")
-                      | #[span(class="appleFooter" style="color: #{whiteLessTransparent}; font-weight: normal;") Questions? Email #[a(href="mailto:crc@osteopathic.org" style="text-decoration: underline; color: #{veryLightPurple}; font-weight: normal;" target="_blank") crc@osteopathic.org]]
+                    td(class="body-text" align="center" style="font-family: #{ffBook}; font-weight: normal; font-size: 14px; line-height: 22px; color: #{textColorLighter};")
+                      | #[span(class="appleFooter" style="color: #{textColorLighter}; font-weight: normal;") Questions? Email #[a(href="mailto:crc@osteopathic.org" style="text-decoration: underline; color: #{textColorLighter}; font-weight: normal;" target="_blank") crc@osteopathic.org]]
 
-                  +social('purple')
+                  +social()
 
-                  +unsubscribe('reverse')
+                  +unsubscribe()
